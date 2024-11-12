@@ -1,0 +1,6 @@
+<div>
+  <app-weekly-goals (openModal)="toggleModal()"></app-weekly-goals>
+  @if (showModal) {
+    <app-weekly-goals-modal (closeModal)="toggleModal()"></app-weekly-goals-modal>
+  }
+</div>

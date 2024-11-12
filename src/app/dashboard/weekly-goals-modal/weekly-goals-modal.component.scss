@@ -1,0 +1,181 @@
+/* weekly-goals-edit.component.scss */
+.goals-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+
+.title-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+h1 {
+    font-size: 30px;
+    color: #4b5853;
+    margin: 0;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+
+  }
+  .dates {
+    color: #4b5853;
+    font-size: 25px;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: #4b5853;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+  }
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.goal-item {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+}
+
+
+.goal-input {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+  padding: 8px 0;
+  color: #5a5a5a;
+  width: 100%;
+  margin-bottom: 0;
+  &:focus {
+    outline: none;
+    border-bottom-color: #2dbdb1;
+  }
+  &.new-goal {
+    color: #9e9e9e;
+  }
+}
+
+.tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 19.1px;
+  padding: 4px 8px;
+  margin-left: 40px;
+  border-bottom: 1px solid;
+  font-weight: 300;
+  font-family: "Oxygen", sans-serif;
+}
+
+.tag-teal {
+  color: #2dbdb1;
+  border-color: #2dbdb1;
+}
+
+.tag-orange {
+  color: #ffb987;
+  border-color: #ffb987;
+}
+
+.tag-gray {
+  color: #9e9e9e;
+  border-color: #9e9e9e;
+}
+
+.dropdown-btn-teal {
+  background: none;
+  border: none;
+  color: #2dbdb1;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.dropdown-btn-orange{
+    background: none;
+    border: none;
+    color: #ffb987;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.dropdown-btn-gray{
+    background: none;
+    border: none;
+    color: #9e9e9e;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background: #2dbdb1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 24px;
+  &:hover {
+    background: darken(#2dbdb1, 5%);
+  }
+}
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+    }
+  
+    .dates {
+      font-size: 18px;
+    }
+  
+    .close-btn {
+      font-size: 28px;
+    }
+  
+    .goal-input {
+      font-size: 14px;
+    }
+  
+    .tag {
+      font-size: 14px;
+    }
+  
+    .save-btn {
+      padding: 8px 20px; 
+      font-size: 12px;
+    }
+  }

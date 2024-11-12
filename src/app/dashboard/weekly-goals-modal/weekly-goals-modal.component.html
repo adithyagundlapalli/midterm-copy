@@ -1,0 +1,49 @@
+<div class="goals-container">
+  <div class="header">
+    <div class="title-section">
+      <h1>Weekly Goals</h1>
+      <img src="x.svg" alt="Close" (click)="onClose()" />
+      <span class="dates">9/24 - 9/30</span>
+    </div>
+  </div>
+
+  <div class="goals-list">
+    @for (goal of goals; track goal.id) {
+      <div class="goal-item">
+        <div class="drag-handle">
+          <img src="dots.svg" alt="Dots" />
+        </div>
+        <input
+          type="text"
+          class="goal-input"
+          [(ngModel)]="goal.text"
+        />
+        <div class="tag-wrapper">
+          <span class="tag" [ngClass]="'tag-' + goal.tagColor">{{ goal.tag }}</span>
+          <button [ngClass]="'dropdown-btn-' + goal.tagColor">▼</button>
+        </div>
+      </div>
+    }
+
+    <div class="goal-item">
+      <div class="drag-handle">
+        <img src="dots.svg" alt="Dots" />
+      </div>
+      <input
+        type="text"
+        class="goal-input new-goal"
+        placeholder="Enter your goal..."
+        [(ngModel)]="newGoalText"
+        (keyup)="onEnterNewGoal($event)"
+      />
+      <div class="tag-wrapper">
+        <span class="tag tag-gray">quarterly goal...</span>
+        <button class="dropdown-btn-gray">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button class="save-btn" (click)="onSave()">Save</button>
+  </div>
+</div>

@@ -1,0 +1,216 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+  
+  .container {
+    width: 387px;
+    height: 591px;
+    border-top: 3.75px solid #ccefec;
+    border-right: 3.75px solid #ccefec;
+    border-left: 3.75px solid #ccefec;
+    background: #fff;
+    border-radius: 12.5px 12.5px 0px 0px;
+    padding: 35px;
+    box-shadow: 0px 8.75px 8.75px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .title {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 190px;
+  }
+  
+  .title-name {
+    font-size: 27.5px;
+    color: #4b5853;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dates {
+    font-weight: 700;
+    font-size: 22.5px;
+    color: #4b5853;
+    padding: 0;
+    font-family: "Oxygen", sans-serif;
+  }
+  
+  .pencil-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .list-items {
+    display: grid;
+  }
+  
+  .left {
+    display: flex;
+    gap: 10px;
+    width: 387px;
+  }
+  
+  input[type="checkbox"] {
+    position: relative;
+    width: 30px;
+    
+  }
+
+
+  .text {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    width: 500px;
+    font-family: "Oxygen", sans-serif;
+  }
+  
+  .goal {
+    font-size: 16.25px;
+    color: #5a5a5a;
+    font-weight: 400;
+    margin-bottom: -20px;
+    font-family: "Oxygen", sans-serif;
+  }
+
+  .checkbox:checked ~ .text .goal {
+    text-decoration: line-through;
+  }
+
+  .tag {
+    font-size: 15px;
+    color: #ffb987;  // default color
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+    
+    &.tagteal {
+      color: #2dbdb1;
+    }
+    
+    &.tagorange {
+      color: #ffb987;
+    }
+    
+    &.taggray {
+      color: #5a5a5a;
+    }
+  }
+  
+  .number {
+    font-size: 15px;
+    color: #5a5a5a;
+    font-weight: 400;
+  }
+  
+  .add-item {
+    font-size: 17.5px;
+    color: #5a5a5a;
+    text-align: left;
+    
+  }
+  
+  .add-item h1 {
+    font-weight: 400;
+    font-size: 17.5px;
+    font-family: "Oxygen", sans-serif;
+  }
+  
+  .line {
+    border: 1.25px;
+    background: rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 1.25px;
+  }
+  
+  @media (max-width: 475px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+  
+    .title {
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .title-name {
+      font-size: 22px;
+    }
+  
+    .year {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  
+    .pencil-icon {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .list-items {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .left {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 5px;
+      width: 100%;
+    }
+  
+    .left img {
+      margin-top: 10px;
+    }
+  
+    .text {
+      width: 100%;
+      grid-template-columns: auto 40px;
+    }
+  
+    .goal {
+      font-size: 14px;
+    }
+  
+    .tag {
+      font-size: 12px;
+    }
+  
+    .number {
+      font-size: 13px;
+    }
+  
+    .add-item h1 {
+      font-size: 15px;
+    }
+  
+    .line {
+      width: 100%;
+    }
+  }

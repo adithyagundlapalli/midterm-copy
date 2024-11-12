@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="header">
+    <div class="title">
+      <h1 class="title-name">Weekly Goals</h1>
+      <img src="pencil1.svg" alt="Pencil" (click)="openModal()" />
+      <h1 class="dates">9/24 - 9/30</h1>
+    </div>
+  </div>
+
+  <div class="list-items" id="goal-list">
+    @for (goal of goals$ | async; track goal.id) {
+      <div class="item">
+        <div class="left">
+          <input 
+            type="checkbox" 
+            class="checkbox" 
+            [checked]="goal.completed"
+            (change)="onToggleComplete(goal.id)"
+          >
+          <div class="text">
+            <h1 class="goal" [class.completed]="goal.completed">{{ goal.text }}</h1>
+            <p></p>
+            <p class="tag" [ngClass]="'tag' + goal.tagColor">{{ goal.tag }}</p>
+          </div>
+        </div>
+      </div>
+      <hr class="line" />
+    }
+  </div>
+
+  <div class="add-item" id="add-goal-btn" (click)="openModal()">
+    <h1>+ Add a weekly goal</h1>
+  </div>
+</div>
