@@ -2,7 +2,7 @@
   <div class="header">
     <div class="title-section">
       <h1>Weekly Goals</h1>
-      <img src="x.svg" alt="Close" (click)="onClose()" />
+      <img src="x.svg" alt="Close" />
       <span class="dates">9/24 - 9/30</span>
     </div>
   </div>
@@ -34,7 +34,7 @@
         class="goal-input new-goal"
         placeholder="Enter your goal..."
         [(ngModel)]="newGoalText"
-        (keyup)="onEnterNewGoal($event)"
+    
       />
       <div class="tag-wrapper">
         <span class="tag tag-gray">quarterly goal...</span>
@@ -44,6 +44,6 @@
   </div>
 
   <div class="footer">
-    <button class="save-btn" (click)="onSave()">Save</button>
+    <button class="save-btn">Save</button>
   </div>
 </div>

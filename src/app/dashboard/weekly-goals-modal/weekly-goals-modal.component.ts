@@ -25,23 +25,5 @@ export class WeeklyGoalsModalComponent {
     });
   }
 
-  onClose() {
-    this.dialogRef.close();
+  
   }
-
-  onSave() {
-    this.goalsService.updateGoals(this.goals);
-    this.dialogRef.close(this.goals);
-  }
-
-  onEnterNewGoal(event: KeyboardEvent) {
-    if (event.key === 'Enter' && this.newGoalText.trim()) {
-      this.goalsService.addGoal(
-        this.newGoalText,
-        'quarterly goal...',
-        'gray'
-      );
-      this.newGoalText = '';
-    }
-  }
-}
